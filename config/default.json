@@ -1,0 +1,18 @@
+{
+  "captcha": {
+    "size": 4,
+    "height": 50,
+    "width": 130,
+    "color": "black",
+    "background": "#efefef",
+    "lineWidth": 2,
+    "noiseColor": "green",
+    "complexity": 3,
+    "chars": "ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678"
+  },
+
+  "redis": {
+    "url": "redis://127.0.0.1",
+    "keyExpireTime": 120
+  }
+}

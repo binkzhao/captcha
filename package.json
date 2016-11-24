@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "body-parser": "~1.15.2",
+    "canvas": "^1.6.2",
     "comment": "0.0.2",
+    "config": "^1.24.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "ejs": "~2.5.2",

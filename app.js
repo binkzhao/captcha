@@ -34,6 +34,7 @@ app.all('*', (req, res, next) => {
 
 // load router
 app.use('/', require('./routes/index'))
+app.use('/captcha', require('./routes/captcha'))
 
 app.use((req, res, next) => {
   let err = new Error('Not Found')
