@@ -1,0 +1,31 @@
+{
+  "name": "express4",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "comment": "0.0.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "~2.5.2",
+    "express": "~4.14.0",
+    "morgan": "~1.7.0",
+    "node-uuid": "^1.4.7",
+    "winston": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "snazzy": "^5.0.0",
+    "standard": "^8.5.0"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "env": [
+      "mocha"
+    ],
+    "ignore": []
+  }
+}
