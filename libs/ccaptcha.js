@@ -15,45 +15,50 @@ class CCaptcha {
     }
   }
 
+  getRandomColor () {
+    let num = (Math.random() * 16777215 + 0.5) >> 0
+    return "#" + ("00000" + num.toString(16)).slice(-6)
+  }
+
   image ({
     type = 'text',
     size = 4,
     height = 40,
     width = 120,
-    color = 'rgb(0,0,0)',
-    background = 'rgb(255,255,255)',
+    background = 'rgb(250, 164, 228)',
+    noiseColor = 'rgb(78,42,10)',
+    textColor = '#000000',
     lineWidth = 1,
     chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678',
     noise = true,
-    noiseColor = 'green',
-    complexity = 3
+    complexity = 2
   } = {}) {
-    let fontSize = Math.round(height * 0.5 + (15 - complexity * 3))
+    let fontSize = Math.round(height * 0.35 + (15 - complexity * 3))
     let canvas = new Canvas(width, height)
     let ctx = canvas.getContext('2d')
 
     ctx.fillStyle = background
     ctx.fillRect(0, 0, width, height)
-    ctx.fillStyle = color
+    ctx.fillStyle = textColor
     ctx.lineWidth = lineWidth
     ctx.font = fontSize + 'px sans'
 
     if (noise) {
-      ctx.strokeStyle = noiseColor
       let noiseHeight = height
-      for (let i = 0; i < 5; i++) {
-        ctx.moveTo(5, Math.random() * noiseHeight)
+      ctx.strokeStyle = noiseColor
+      for (let i = 0; i < 8; i++) {
+        ctx.moveTo(Math.floor(0.08 * width), Math.random() * noiseHeight)
         ctx.bezierCurveTo(
-          80, Math.random() * noiseHeight,
-          160, Math.random() * noiseHeight,
-          230, Math.random() * noiseHeight
+          Math.floor(0.32 * width), Math.random() * noiseHeight,
+          Math.floor(1.07 * width), Math.random() * noiseHeight,
+          Math.floor(0.92 * width), Math.random() * noiseHeight
         )
         ctx.stroke()
       }
     }
 
     let modifier = complexity / 5
-    ctx.strokeStyle = color
+    ctx.strokeStyle = this.getRandomColor()
     let [text, answer] = this._getTextAndAnswer(type, chars, size)
 
     for (let i = 0; i < text.length; i++) {

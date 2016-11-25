@@ -28,6 +28,7 @@ router.get('/', (req, res) => {
       let key = uuid.v1().toUpperCase()
       yield db.client.set(key, imgData.text)
       db.client.expire(key, rConfig.keyExpireTime || 120)
+
       return res.status(200)
         .json({ key: key, image: imgData.data })
     } catch (err) {
