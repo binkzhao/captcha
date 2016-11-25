@@ -1,5 +1,6 @@
 {
   "captcha": {
+    "type": "text",
     "size": 4,
     "height": 50,
     "width": 130,

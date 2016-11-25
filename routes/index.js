@@ -3,8 +3,7 @@
 const router = require('express')()
 
 router.get('/', (req, res) => {
-  let myMap = new Map().set(true, 7).set({foo: 3}, ['abc'])
-  res.json({code: [...myMap][1]})
+  res.json({ code: 123 })
 })
 
 module.exports = router

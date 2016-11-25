@@ -8,14 +8,17 @@
   "dependencies": {
     "body-parser": "~1.15.2",
     "canvas": "^1.6.2",
-    "comment": "0.0.2",
+    "co": "^4.6.0",
     "config": "^1.24.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "ejs": "~2.5.2",
     "express": "~4.14.0",
+    "koa-redis": "^2.1.2",
+    "moment": "^2.17.0",
     "morgan": "~1.7.0",
     "node-uuid": "^1.4.7",
+    "redis": "^2.6.3",
     "winston": "^2.3.0"
   },
   "devDependencies": {

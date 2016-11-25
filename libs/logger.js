@@ -10,6 +10,7 @@ winston.add(winston.transports.Console, {
   },
   'colorize': true
 })
+
 winston.add(winston.transports.File, {
   filename: 'logs/express.log',
   'timestamp': () => {
