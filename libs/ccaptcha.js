@@ -17,7 +17,7 @@ class CCaptcha {
 
   getRandomColor () {
     let num = (Math.random() * 16777215 + 0.5) >> 0
-    return "#" + ("00000" + num.toString(16)).slice(-6)
+    return '#' + ('00000' + num.toString(16)).slice(-6)
   }
 
   image ({
@@ -27,7 +27,7 @@ class CCaptcha {
     width = 120,
     background = 'rgb(250, 164, 228)',
     noiseColor = 'rgb(78,42,10)',
-    textColor = '#000000',
+    textColor = 'rgb(0,0,0)',
     lineWidth = 1,
     chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678',
     noise = true,
@@ -73,7 +73,7 @@ class CCaptcha {
       ctx.fillText(text.charAt(i), i * 6, -8)
     }
 
-    return { text: answer, data: this._getImage(canvas).next().value }
+    return { text: answer, image: this._getImage(canvas).next().value }
   }
 
   * _getImage (canvas) {

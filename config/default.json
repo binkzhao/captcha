@@ -4,8 +4,7 @@
     "size": 4,
     "height": 43,
     "width": 115,
-    "lineWidth": 1,
-    "chars": "ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678"
+    "lineWidth": 1
   },
 
   "redis": {

@@ -3,7 +3,7 @@
 const router = require('express')()
 
 router.get('/', (req, res) => {
-  res.json({ code: 123 })
+  res.send('Welcome To Bink Micro Service')
 })
 
 module.exports = router
