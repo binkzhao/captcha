@@ -10,6 +10,7 @@ winston.add(winston.transports.Console, {
   },
   'colorize': true
 })
+
 winston.add(winston.transports.File, {
   filename: 'logs/express.log',
   'timestamp': () => {
@@ -18,16 +19,17 @@ winston.add(winston.transports.File, {
   'colorize': true
 })
 
-winston.level = 'error'
-
 exports.error = msg => {
+  winston.level = 'error'
   winston.error(msg)
 }
 
 exports.info = msg => {
+  winston.level = 'info'
   winston.info(msg)
 }
 
 exports.debug = msg => {
+  winston.level = 'debug'
   winston.error(msg)
 }

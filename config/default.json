@@ -1,0 +1,14 @@
+{
+  "captcha": {
+    "type": "text",
+    "size": 4,
+    "height": 43,
+    "width": 115,
+    "lineWidth": 1
+  },
+
+  "redis": {
+    "url": "redis://127.0.0.1",
+    "keyExpireTime": 120
+  }
+}
